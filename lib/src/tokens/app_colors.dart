@@ -60,6 +60,11 @@ class FrotaSemanticColors {
   final Color feedbackError;
   final Color feedbackInfo;
 
+  final Color textOnSuccess;
+  final Color textOnInfo;
+  final Color textOnWarning;
+  final Color textOnError;
+
   const FrotaSemanticColors({
     required this.backgroundPrimary,
     required this.backgroundSecondary,
@@ -83,6 +88,11 @@ class FrotaSemanticColors {
     required this.feedbackWarning,
     required this.feedbackError,
     required this.feedbackInfo,
+
+    required this.textOnSuccess,
+    required this.textOnInfo,
+    required this.textOnWarning,
+    required this.textOnError,
   });
 
   factory FrotaSemanticColors.light() => const FrotaSemanticColors(
@@ -108,5 +118,10 @@ class FrotaSemanticColors {
     feedbackWarning: FrotaColors.warning,
     feedbackError: FrotaColors.error,
     feedbackInfo: FrotaColors.info,
+
+    textOnSuccess: FrotaColors.white,
+    textOnWarning: FrotaColors.black,
+    textOnError: FrotaColors.white,
+    textOnInfo: FrotaColors.white,
   );
 }
