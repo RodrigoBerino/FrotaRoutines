@@ -17,15 +17,25 @@ class AppHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       color: Colors.blue,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SvgPicture.asset(logoAsset, height: 40),
-          WifiStatusButton(isOnline: isOnline, message: wifiMessage),
-        ],
+      alignment: Alignment.center,
+      child: SafeArea(
+        bottom: false,
+        child: SizedBox(
+          height: kToolbarHeight,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              SvgPicture.asset(logoAsset, height: 32),
+              WifiStatusButton(isOnline: isOnline, message: wifiMessage),
+            ],
+          ),
+        ),
       ),
     );
   }
+
+  /*   @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight + 16); */
 }

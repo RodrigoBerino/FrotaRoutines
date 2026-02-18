@@ -20,11 +20,10 @@ class AppCheckfield extends StatelessWidget {
     final theme = Theme.of(context).extension<FrotaThemeData>()!;
     return Container(
       margin: theme.spacing.listItemPadding,
-
       decoration: BoxDecoration(
-        color: value ? theme.colors.actionPrimary : Colors.white,
+        color: value ? Color(0XFFEFF6FF) : Colors.white,
         border: Border.all(
-          color: value ? theme.colors.actionPrimary : Colors.grey,
+          color: value ? Color(0XFF03A9F4) : Color(0XFFE5E7EB),
         ),
         borderRadius: theme.borders.card,
       ),
@@ -38,13 +37,13 @@ class AppCheckfield extends StatelessWidget {
         title: Text(
           title,
           style: theme.text.label.copyWith(
-            color: value ? theme.colors.actionPrimary : Colors.grey,
+            color: value ? theme.colors.actionPrimary : Color(0XFF6D6D6D),
           ),
         ),
         //
         subtitle: Text(
           subtitle,
-          style: theme.text.body.copyWith(color: Colors.grey),
+          style: theme.text.body.copyWith(color: Color(0XFFB0B0B0)),
         ),
         //
         controlAffinity: ListTileControlAffinity.leading,

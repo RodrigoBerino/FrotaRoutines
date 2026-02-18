@@ -35,15 +35,17 @@ class _WifiStatusButtonState extends State<WifiStatusButton> {
           onTap: _toggleTooltip,
 
           child: Container(
-            padding: const EdgeInsets.all(12),
+            padding: const EdgeInsets.all(8),
+
             decoration: const BoxDecoration(
               shape: BoxShape.circle,
-              color: Color(0xFFFFE0E0),
+              color: Color(0xFFFFD6D6),
             ),
 
             child: Icon(
-              widget.isOnline ? Icons.wifi : Icons.wifi_off,
-              color: widget.isOnline ? Colors.green : Colors.red,
+              widget.isOnline ? Icons.wifi_off : Icons.wifi_off,
+              size: 18,
+              color: widget.isOnline ? Color(0XFFB91C1C) : Color(0XFFB91C1C),
             ),
           ),
         ),
@@ -51,7 +53,7 @@ class _WifiStatusButtonState extends State<WifiStatusButton> {
         //
         if (_showTooltip)
           Positioned(
-            top: 60,
+            top: 40,
             right: 0,
             child: TooltipBubble(message: widget.message),
           ),

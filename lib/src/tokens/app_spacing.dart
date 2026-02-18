@@ -36,7 +36,7 @@ class FrotaLayoutSpacing {
       screenPadding: EdgeInsets.all(FrotaSpacing.md),
       cardPadding: EdgeInsets.all(FrotaSpacing.md),
       listItemPadding: EdgeInsets.symmetric(
-        horizontal: FrotaSpacing.md,
+        horizontal: FrotaSpacing.none,
         vertical: FrotaSpacing.sm,
       ),
       sectionSpacing: FrotaSpacing.lg,
@@ -75,7 +75,7 @@ class FrotaBordersSemantic {
   factory FrotaBordersSemantic.defaultBorders() {
     return FrotaBordersSemantic(
       card: BorderRadius.circular(FrotaBorders.radiusMd),
-      button: BorderRadius.circular(FrotaBorders.radiusLg),
+      button: BorderRadius.circular(FrotaBorders.radiusMd),
       input: BorderRadius.circular(FrotaBorders.radiusSm),
       sheet: BorderRadius.vertical(top: Radius.circular(FrotaBorders.radiusXl)),
     );

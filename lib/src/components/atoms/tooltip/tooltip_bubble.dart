@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frota/src/components/atoms/tooltip/triangle_painter.dart';
 //import 'package:frota/src/components/atoms/tooltip/triangle_painter.dart';
 
 class TooltipBubble extends StatelessWidget {
@@ -8,19 +9,23 @@ class TooltipBubble extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      elevation: 4,
-      borderRadius: BorderRadius.circular(8),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-        decoration: BoxDecoration(
-          color: const Color(0xFFFFD6D6),
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Text(message, style: const TextStyle(color: Colors.red)),
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.end,
 
-      //const TrianglePainterWidget(),
+      children: [
+        CustomPaint(size: const Size(16, 8), painter: TrianglePainter()),
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+          decoration: BoxDecoration(
+            color: const Color(0xFFFFD6D6),
+            borderRadius: BorderRadius.circular(4),
+          ),
+          child: Text(
+            message,
+            style: const TextStyle(color: Color.fromARGB(255, 175, 41, 31)),
+          ),
+        ),
+      ],
     );
   }
 }

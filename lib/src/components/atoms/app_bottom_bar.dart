@@ -22,8 +22,16 @@ class _AppBottomBarState extends State<AppBottomBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      body: widget.pages[_currentIndex],
+
+      body: IndexedStack(index: _currentIndex, children: widget.pages),
+
+      //[_currentIndex],
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+
+      /* floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.car_repair),
+      ), */
       floatingActionButton: SizedBox(
         height: 70,
         width: 70,
@@ -31,16 +39,18 @@ class _AppBottomBarState extends State<AppBottomBar> {
           backgroundColor: Colors.blue,
           onPressed: () {},
           shape: const CircleBorder(),
-          child: const Icon(Icons.store),
+          child: const Icon(Icons.store, color: Colors.white),
         ),
       ),
       //
       bottomNavigationBar: BottomAppBar(
         elevation: 10,
+
         color: Colors.white,
 
         shape: const CircularNotchedRectangle(),
         notchMargin: 10,
+
         child: SizedBox(
           height: 70,
           child: Row(

@@ -55,6 +55,7 @@ class FrotaTextStyles {
   final TextStyle caption;
   final TextStyle button;
   final TextStyle label;
+  final TextStyle subLabel;
 
   const FrotaTextStyles({
     required this.screenTitle,
@@ -64,6 +65,7 @@ class FrotaTextStyles {
     required this.caption,
     required this.button,
     required this.label,
+    required this.subLabel,
   });
 
   factory FrotaTextStyles.defaultStyles(Color textColor) {
@@ -81,8 +83,12 @@ class FrotaTextStyles {
         letterSpacing: 0.5,
         color: textColor,
       ),
-      label: _FrotaBaseTextStyles.bodySm.copyWith(
-        fontWeight: FrotaTypographyTokens.medium,
+      label: _FrotaBaseTextStyles.bodyMd.copyWith(
+        fontWeight: FrotaTypographyTokens.bold,
+        color: textColor,
+      ),
+      subLabel: _FrotaBaseTextStyles.bodySm.copyWith(
+        fontWeight: FrotaTypographyTokens.regular,
         color: textColor,
       ),
     );

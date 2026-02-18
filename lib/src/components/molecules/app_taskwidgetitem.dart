@@ -32,8 +32,15 @@ class AppTaskwidgetitem extends StatelessWidget {
         padding: theme.spacing.cardPadding,
         decoration: BoxDecoration(
           color: Colors.white,
-          border: Border.all(color: Colors.grey),
           borderRadius: theme.borders.card,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.05),
+              blurRadius: 4,
+              offset: const Offset(0, 2),
+            ),
+          ],
+          //          border: Border.all(color: Color(0XFFE5E7EB)),
         ),
 
         //background icone
@@ -42,10 +49,10 @@ class AppTaskwidgetitem extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: Colors.lightBlue,
+                color: Color(0xFFDBEAFE),
                 borderRadius: theme.borders.card,
               ),
-              child: Icon(icon, color: Colors.blue),
+              child: Icon(icon, color: Color(0xFF2563EB)),
             ),
 
             const SizedBox(width: 16),
@@ -54,22 +61,25 @@ class AppTaskwidgetitem extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(title, style: theme.text.label),
-                  const SizedBox(height: 4),
+                  Text(
+                    title,
+                    style: theme.text.label.copyWith(color: Color(0XFF525252)),
+                  ),
+                  //const SizedBox(height: 4),
                   Row(
                     children: [
                       Text(
                         subtitle,
-                        style: theme.text.label.copyWith(color: Colors.grey),
+                        style: theme.text.subLabel.copyWith(color: Colors.grey),
                       ),
-                      const SizedBox(width: 8),
-                      AppBadge(label: statusLabel, status: status),
+                      /*const SizedBox(width: 8),
+                      AppBadge(label: statusLabel, status: status), */
                     ],
                   ),
                 ],
               ),
             ),
-            const Icon(Icons.chevron_right, color: Colors.blue),
+            const Icon(Icons.chevron_right, color: Color(0xFF2563EB)),
           ],
         ),
       ),

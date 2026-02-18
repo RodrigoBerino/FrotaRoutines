@@ -100,7 +100,7 @@ class FrotaSemanticColors {
     backgroundSecondary: FrotaColors.gray50,
 
     textPrimary: FrotaColors.gray900,
-    textSecondary: FrotaColors.gray600,
+    textSecondary: FrotaColors.white,
     textDisabled: FrotaColors.gray400,
 
     actionPrimary: FrotaColors.blue600,

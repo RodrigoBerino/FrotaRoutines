@@ -27,8 +27,8 @@ class AppButton extends StatelessWidget {
       onPressed: isLoading ? null : onPressed,
 
       style: ElevatedButton.styleFrom(
-        backgroundColor: theme.colors.actionPrimary,
-        minimumSize: const Size(double.infinity, 48),
+        backgroundColor: theme.colors.actionSecondary,
+        minimumSize: const Size(double.infinity, 54),
         shape: RoundedRectangleBorder(borderRadius: theme.borders.button),
       ),
 
@@ -45,13 +45,13 @@ class AppButton extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 if (icon != null) ...[
-                  Icon(icon, size: 20),
+                  Icon(icon, size: 20, color: Colors.white),
                   const SizedBox(width: 8),
                 ],
                 Text(
                   label,
                   style: theme.text.button.copyWith(
-                    color: theme.colors.textOnError,
+                    color: theme.colors.textSecondary,
                   ),
                 ),
               ],
