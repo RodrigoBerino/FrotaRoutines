@@ -1,6 +1,8 @@
-![Frota DS Banner](./assets/frota_banner.svg)
+![Frota DS Banner](./assets/new_banner.svg)
 
-App Flutter para inspeções de frota de veículos que funciona em modo **offline-first** e sincroniza dados com um servidor quando há conexão com internet feito a partir de um problema real para equipes em campo que precisam capturar rotinas e riscos sem depender de conectividade constante.
+**Rotina para tarefas de segurança desenvolvido com arquitetura MVVM!**
+
+App Flutter para inspeções de frota de veículos e segurança que funciona em modo **offline-first** e sincroniza dados com um servidor quando há conexão com internet feito a partir de um problema real para equipes em campo que precisam capturar rotinas e riscos sem depender de conectividade constante.
 
 O App foi desenvolvido usando a **arquitetura MVVM (Model-View-ViewModel)**, que separa a View (widgets e interface do usuário), ViewModel (lógica de apresentação e estados) e Model (dados e entidades).
 
@@ -45,6 +47,7 @@ O App nasceu com a necessidade de tornar uma parte do sistema offline-first, que
 - Flutter
 - Dart
 - Figma
+- Material
 - Provider (Gerenciamento de estado)
 - Arquitetura MVVM
 - Persistência local
