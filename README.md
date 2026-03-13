@@ -8,6 +8,10 @@ O App foi desenvolvido usando a **arquitetura MVVM (Model-View-ViewModel)**, que
 
 O App também foi um reedesign do sistema atual, buscando melhorias de arquitetura e estética para o usuário.
 
+<p align="center">
+  <img src="./assets/1.svg" width="75%"/>
+</p>
+
 ---
 
 ### 1. Rode esse projeto
